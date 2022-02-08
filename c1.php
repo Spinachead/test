@@ -1,1 +1,5 @@
-从git上创建的第一个文件
+<?php
+
+var_dump('this is bob first test');
+
+
