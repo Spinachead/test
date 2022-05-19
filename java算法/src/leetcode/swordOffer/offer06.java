@@ -24,7 +24,7 @@ public class offer06 {
     }
 
     //辅助栈法
-    public int[] reversePrint2(ListNode head) {
+    public static int[] reversePrint2(ListNode head) {
         LinkedList<Integer> stack = new LinkedList<Integer>();
         while(head != null) {
             stack.addLast(head.val);
@@ -35,5 +35,16 @@ public class offer06 {
             res[i] = stack.removeLast();
         return res;
     }
+
+	public static void main(String[] args) {
+        ListNode node = new ListNode(0);
+        node.next = new ListNode(1);
+        node.next.next = new ListNode(2);
+		for (int i: reversePrint2(node)
+			 ) {
+			System.out.println(i);
+		}
+	}
+
 
 }
