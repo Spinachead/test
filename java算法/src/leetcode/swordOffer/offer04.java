@@ -16,6 +16,21 @@ public class offer04 {
 		}
 		return false;
 	}
+	/**
+	 * 剑指 Offer 11. 旋转数组的最小数字
+	 * @param nums
+	 * @return
+	 */
+	public static int minArray(int[] nums) {
+		int i=0, j=nums.length-1;
+		while (i<j) {
+			int m = (i+j)/2;
+			if(nums[m]>nums[j])  i=m+1;
+			else if(nums[m]<nums[j]) j=m;
+			else j--;
+		}
+		return nums[i];
+	}
 
 	public static void main(String[] args) {
 		int[][] nums = {
@@ -25,7 +40,9 @@ public class offer04 {
 				{10, 13, 14, 17, 24},
 				{18, 21, 23, 26, 30},
 		};
-		System.out.println(findNumberIn2DArray(nums, 20));
+		int[] nums2 = {3,4,5,6,7,1,2,3,4};
+		System.out.println(minArray(nums2));
+//		System.out.println(findNumberIn2DArray(nums, 20));
 
 	}
 }
