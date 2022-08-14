@@ -9,7 +9,7 @@ public class BubbleSort {
     public static void main(String[] args) {
 //        int[] arr={3,9,-1,10,-2};
 //        bubbleSort(arr);
-//        System.out.println("ÅÅĞòºóµÄÊı×éÊÇ");
+//        System.out.println("æ’åºåçš„æ•°ç»„æ˜¯");
 //        System.out.println(Arrays.toString(arr));
         int[] arr1 = new int[80000];
         for (int i = 0; i < arr1.length; i++) {
@@ -18,33 +18,34 @@ public class BubbleSort {
         Date date1 = new Date();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String strdate = simpleDateFormat.format(date1);
-        System.out.println("ÅÅĞòÇ°µÄÊ±¼äÊÇ:"+strdate);
+        System.out.println("æ’åºå‰çš„æ—¶é—´æ˜¯:"+strdate);
         bubbleSort(arr1);
         Date date2 = new Date();
         String strdate2 = simpleDateFormat.format(date2);
-        System.out.println("ÅÅĞòºóµÄÊ±¼äÊÇ"+strdate2);
-//        System.out.println("ÅÅĞòºóµÄÊı×éÊÇ");
+        System.out.println("æ’åºåçš„æ—¶é—´æ˜¯"+strdate2);
+//        System.out.println("æ’åºåçš„æ•°ç»„æ˜¯");
 //        System.out.println(Arrays.toString(arr1));
     }
-public static void bubbleSort(int[] arr){
-    int temp=0;
-    boolean flag = false;
-    for (int i = 0; i <arr.length-1; i++) {
-        for (int j = 0; j < arr.length-1-i; j++) {
-            if(arr[j]>arr[j+1]){
-                flag = true;
-                temp = arr[j];
-                arr[j] = arr[j+1];
-                arr[j+1] = temp;
-            }
-        }
-        if(!flag){
-            break;
-        }else{
-            flag = false;
-        }
-//        System.out.println("µÚ"+(i+1)+"ÌËÅÅĞòÎª");
+
+	public static void bubbleSort(int[] arr) {
+		int temp = 0;
+		boolean flag = false;
+		for (int i = 0; i < arr.length - 1; i++) {
+			for (int j = 0; j < arr.length - 1 - i; j++) {
+				if (arr[j] > arr[j + 1]) {
+					flag = true;
+					temp = arr[j];
+					arr[j] = arr[j + 1];
+					arr[j + 1] = temp;
+				}
+			}
+			if (!flag) {
+				break;
+			} else {
+				flag = false;
+			}
+//        System.out.println("ç¬¬"+(i+1)+"è¶Ÿæ’åºä¸º");
 //        System.out.println(Arrays.toString(arr));
-    }
- }
+		}
+	}
 }
